@@ -1,18 +1,18 @@
-import { Button, CenterContainer, Typography } from "components";
+import { Button, CenterContainer, Typography, VerticalStack } from "components";
 import { Link } from "react-router";
 
 export const MainMenu = () => {
   return (
     <CenterContainer>
-      <div className="flex flex-col gap-5">
+      <VerticalStack>
         <Typography variant="h1">Tanuljunk együtt magyarul!</Typography>
         <Typography variant="p" muted>
           Ezzel az alkalmazással gyakorolhatja az eddig tanultakat.
         </Typography>
         <Button asChild>
-          <Link to="/lect-1">-t -ot -et -öt -at</Link>
+          <Link to="/acusative">Tárgyeset</Link>
         </Button>
-      </div>
+      </VerticalStack>
     </CenterContainer>
   );
 };
