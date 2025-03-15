@@ -8,5 +8,4 @@ export * from "./ui/badge";
 export * from "./ui/button";
 export * from "./ui/carousel";
 export * from "./ui/dropdown-menu";
-export * from "./ui/select";
 export * from "./ui/typography";
