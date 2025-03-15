@@ -1,15 +1,5 @@
-import {
-  Button,
-  CenterContainer,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuCheckboxItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "components";
-import { BackButton } from "features";
-import { Languages } from "lucide-react";
+import { CenterContainer } from "components";
+import { BackButton, LanguageSelector } from "features";
 import { useLocation } from "react-router";
 
 export const Navigation = () => {
@@ -21,22 +11,7 @@ export const Navigation = () => {
         <CenterContainer>
           <div className="mx-auto flex justify-between">
             <div>{isBackButtonShown && <BackButton />}</div>
-            <div className="flex justify-between gap-4">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button size="icon">
-                    <Languages />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>Language</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuCheckboxItem>English</DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>Magyar</DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>Srpski</DropdownMenuCheckboxItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
+            <LanguageSelector />
           </div>
         </CenterContainer>
       </nav>

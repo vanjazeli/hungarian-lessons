@@ -26,11 +26,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "utils": ["./src/utils/index.ts"],
       "components": ["./src/components/index.ts"],
       "features": ["./src/features/index.ts"],
       "lib": ["./src/lib/index.ts"],
-      "pages": ["./src/pages/index.ts"]
+      "pages": ["./src/pages/index.ts"],
+      "utils": ["./src/utils/index.ts"]
     }
   },
   "include": ["src"]
