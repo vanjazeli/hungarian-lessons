@@ -2,7 +2,7 @@ import {
   Button,
   Typography,
   VerticalStack,
-  CenterLayout,
+  MainLayout,
   Badge,
 } from "components";
 import { Link } from "react-router";
@@ -12,7 +12,7 @@ export const MainMenu = () => {
   const { t } = useTranslation("mainMenu");
 
   return (
-    <CenterLayout>
+    <MainLayout>
       <VerticalStack>
         <Badge variant="outline">{t("badge")}</Badge>
         <Typography variant="h1">{t("title")}</Typography>
@@ -23,6 +23,6 @@ export const MainMenu = () => {
           <Link to="/accusative">{t("accusative")}</Link>
         </Button>
       </VerticalStack>
-    </CenterLayout>
+    </MainLayout>
   );
 };
