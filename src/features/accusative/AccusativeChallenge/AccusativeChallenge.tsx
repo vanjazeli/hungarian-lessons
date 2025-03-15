@@ -26,6 +26,10 @@ export const AccusativeChallenge = () => {
 
   const [input, setInput] = useState("");
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
   return (
     <VerticalStack>
       <Progress value={32} />
@@ -52,7 +56,7 @@ export const AccusativeChallenge = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <Input />
+      <Input value={input} onChange={handleChange} />
       <Keyboard setInput={setInput} />
     </VerticalStack>
   );
