@@ -32,7 +32,8 @@ export const Navigation = () => {
                   <DropdownMenuLabel>Language</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuCheckboxItem>English</DropdownMenuCheckboxItem>
-                  <DropdownMenuCheckboxItem>Hungarian</DropdownMenuCheckboxItem>
+                  <DropdownMenuCheckboxItem>Magyar</DropdownMenuCheckboxItem>
+                  <DropdownMenuCheckboxItem>Srpski</DropdownMenuCheckboxItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

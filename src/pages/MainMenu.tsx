@@ -1,10 +1,17 @@
-import { Button, Typography, VerticalStack, CenterLayout } from "components";
+import {
+  Button,
+  Typography,
+  VerticalStack,
+  CenterLayout,
+  Badge,
+} from "components";
 import { Link } from "react-router";
 
 export const MainMenu = () => {
   return (
     <CenterLayout>
       <VerticalStack>
+        <Badge variant="outline">Main Menu</Badge>
         <Typography variant="h1">
           Let's improve your Hungarian skills together!
         </Typography>
