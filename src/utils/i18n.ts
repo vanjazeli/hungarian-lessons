@@ -6,13 +6,21 @@ import { initReactI18next } from "react-i18next";
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
-    translation: {
+    mainMenu: {
+      badge: "Main Menu",
       title: "Let's improve your Hungarian skills together!",
+      description:
+        "Take part in interactive practice sessions designed to help you improve your Hungarian skills through a variety of exercises and challenges.",
+      accusative: "Accusative",
     },
   },
   hu: {
-    translation: {
+    mainMenu: {
+      badge: "Főmenü",
       title: "Fejlesszük együtt a magyar nyelvtudásodat!",
+      description:
+        "Vegyen részt interaktív gyakorlatokon, amelyek célja, hogy különféle gyakorlatokon és kihívásokon keresztül segítsenek fejleszteni magyar nyelvtudását.",
+      accusative: "Tárgyeset",
     },
   },
 };

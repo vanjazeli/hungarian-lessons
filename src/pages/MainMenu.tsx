@@ -9,20 +9,18 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 
 export const MainMenu = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("mainMenu");
 
   return (
     <CenterLayout>
       <VerticalStack>
-        <Badge variant="outline">Main Menu</Badge>
+        <Badge variant="outline">{t("badge")}</Badge>
         <Typography variant="h1">{t("title")}</Typography>
         <Typography variant="p" muted>
-          Take part in interactive practice sessions designed to help you
-          improve your Hungarian skills through a variety of exercises and
-          challenges.
+          {t("description")}
         </Typography>
         <Button asChild>
-          <Link to="/acusative">Accusative</Link>
+          <Link to="/accusative">{t("accusative")}</Link>
         </Button>
       </VerticalStack>
     </CenterLayout>

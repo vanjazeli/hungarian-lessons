@@ -1,6 +1,6 @@
 import { Typography, VerticalStack, CenterLayout, Badge } from "components";
 
-export const Acusative = () => {
+export const Accusative = () => {
   return (
     <CenterLayout>
       <VerticalStack>

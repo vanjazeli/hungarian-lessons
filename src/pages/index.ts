@@ -1,2 +1,2 @@
-export * from "./Acusative";
+export * from "./Accusative";
 export * from "./MainMenu";

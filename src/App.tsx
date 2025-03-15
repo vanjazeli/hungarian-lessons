@@ -1,11 +1,11 @@
-import { Acusative, MainMenu } from "pages";
+import { Accusative, MainMenu } from "pages";
 import { Route, Routes } from "react-router";
 
 export const App = () => {
   return (
     <Routes>
       <Route index element={<MainMenu />} />
-      <Route path="/acusative" element={<Acusative />} />
+      <Route path="/accusative" element={<Accusative />} />
     </Routes>
   );
 };

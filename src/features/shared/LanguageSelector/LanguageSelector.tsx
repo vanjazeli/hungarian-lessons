@@ -3,7 +3,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "components";
@@ -11,7 +10,7 @@ import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const LanguageSelector = () => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation("navigation");
 
   const { changeLanguage, language } = i18n;
   const langaugeOptions = [
@@ -33,8 +32,6 @@ export const LanguageSelector = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Language</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         {langaugeOptions.map(({ label, code }) => (
           <DropdownMenuCheckboxItem
             key={code}
