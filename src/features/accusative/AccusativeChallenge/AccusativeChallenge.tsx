@@ -14,6 +14,7 @@ import {
 import { getRandomQuestions } from "./AccusativeChallenge.utils";
 import { accusativeChallengeQuestions } from "./AccusativeChallenge.consts";
 import { useRef, useState } from "react";
+import { Keyboard } from "features";
 
 export const AccusativeChallenge = () => {
   const [_, setApi] = useState<CarouselApi | null>(null);
@@ -23,25 +24,24 @@ export const AccusativeChallenge = () => {
     getRandomQuestions(accusativeChallengeQuestions, numberOfQuestions),
   );
 
+  const [input, setInput] = useState("");
+
   return (
     <VerticalStack>
       <Progress value={32} />
-      <Carousel
-        setApi={setApi}
-        className="aspect-square w-full"
-        opts={{ watchDrag: false }}
-      >
+      <Carousel setApi={setApi} className="w-full" opts={{ watchDrag: false }}>
         <CarouselContent>
           {questions.map(({ noun, translation }, index) => (
             <CarouselItem
-              className="flex aspect-square items-center justify-center"
+              className="flex aspect-[2] items-center justify-center"
               key={index}
             >
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger className="outline-none" tabIndex={1}>
                   <Typography
                     className="border-foreground border-b-2 border-dashed"
                     variant="h2"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     {noun}
                   </Typography>
@@ -53,6 +53,7 @@ export const AccusativeChallenge = () => {
         </CarouselContent>
       </Carousel>
       <Input />
+      <Keyboard setInput={setInput} />
     </VerticalStack>
   );
 };

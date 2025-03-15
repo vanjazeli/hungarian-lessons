@@ -6,7 +6,7 @@ export const Navigation = () => {
   const isBackButtonShown = useLocation().pathname !== "/";
 
   return (
-    <header className="border">
+    <header className="border-b">
       <nav className="py-4">
         <CenterContainer>
           <div className="mx-auto flex justify-between">
