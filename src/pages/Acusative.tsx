@@ -1,16 +1,15 @@
-import { Navigation } from "features";
-import { CenterContainer, Typography, VerticalStack } from "components";
+import { Typography, VerticalStack, CenterLayout } from "components";
 
 export const Acusative = () => {
   return (
-    <CenterContainer>
-      <Navigation />
+    <CenterLayout>
       <VerticalStack>
-        <Typography variant="h1">Tárgyeset</Typography>
+        <Typography variant="h1">Accusative</Typography>
         <Typography variant="p" muted>
-          -t, -ot, -et, -öt, -at ragokkal alkossátok meg a helyes tárgyesetet!
+          Use -t, -ot, -et, -öt, -at suffixes to form the correct accusative
+          form of a Hungarian word.
         </Typography>
       </VerticalStack>
-    </CenterContainer>
+    </CenterLayout>
   );
 };
