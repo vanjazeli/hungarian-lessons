@@ -1,8 +1,10 @@
+import { Navigation } from "features";
 import { CenterContainer, Typography, VerticalStack } from "components";
 
 export const Acusative = () => {
   return (
     <CenterContainer>
+      <Navigation />
       <VerticalStack>
         <Typography variant="h1">Tárgyeset</Typography>
         <Typography variant="p" muted>

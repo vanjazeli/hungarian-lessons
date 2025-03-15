@@ -6,7 +6,13 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const BackButton = ({ ...props }: ButtonProps) => {
   return (
-    <Button asChild variant="outline" size="icon" {...props}>
+    <Button
+      className="text-white"
+      asChild
+      variant="default"
+      size="icon"
+      {...props}
+    >
       <Link to="/">
         <ChevronLeft />
       </Link>
