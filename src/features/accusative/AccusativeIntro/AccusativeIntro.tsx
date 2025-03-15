@@ -1,9 +1,20 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight } from "lucide-react";
+import { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
-export const AccusativeIntro = () => {
+type AccusativeIntroProps = {
+  setIsChallengeActive: Dispatch<SetStateAction<boolean>>;
+};
+
+export const AccusativeIntro = ({
+  setIsChallengeActive,
+}: AccusativeIntroProps) => {
   const { t } = useTranslation("accusative");
+
+  const handleClick = () => {
+    setIsChallengeActive(true);
+  };
 
   return (
     <VerticalStack>
@@ -77,7 +88,7 @@ export const AccusativeIntro = () => {
           </li>
         </ul>
       </div>
-      <Button className="mt-20">
+      <Button className="mt-20" onClick={handleClick}>
         {t("button")}
         <ArrowRight />
       </Button>
