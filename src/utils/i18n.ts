@@ -17,7 +17,7 @@ const resources = {
       badge: "Challenge",
       title: "Accusative",
       description:
-        "Use -t, -ot, -et, -öt, -at suffixes to form the correct accusative form of a Hungarian word.",
+        "For each word presented, input the correct Hungarian accusative form into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.",
       listTitle: "Examples:",
       button: "Start the challenge",
     },
@@ -34,7 +34,7 @@ const resources = {
       badge: "Kihívás",
       title: "Tárgyeset",
       description:
-        "Használja a -t, -ot, -et, -öt, -at ragokat a magyar szó helyes tárgyeseti formájának kialakításához.",
+        "Minden bemutatott szó esetén írja be a mezőbe a helyes magyar accusative formáját a megfelelő képzők használatával: -t, -ot, -et, -öt, vagy -at.",
       listTitle: "Példák:",
       button: "Kihívás indítása",
     },

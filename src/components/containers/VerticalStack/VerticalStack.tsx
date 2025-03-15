@@ -8,7 +8,7 @@ export const VerticalStack = ({
   ...props
 }: VerticalStackProps) => {
   return (
-    <div className={cn("flex flex-col gap-4", className)} {...props}>
+    <div className={cn("flex flex-col gap-8", className)} {...props}>
       {children}
     </div>
   );

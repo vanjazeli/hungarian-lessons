@@ -1,4 +1,4 @@
-import { AccusativeIntro } from "features";
+import { AccusativeChallenge, AccusativeIntro } from "features";
 import { useState } from "react";
 
 export const AccusativePanel = () => {
@@ -9,7 +9,7 @@ export const AccusativePanel = () => {
       {!isChallengeActive ? (
         <AccusativeIntro setIsChallengeActive={setIsChallengeActive} />
       ) : (
-        <div></div>
+        <AccusativeChallenge />
       )}
     </div>
   );

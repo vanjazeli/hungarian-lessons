@@ -1,17 +1,20 @@
 import { CenterContainer } from "components";
-import { BackButton, LanguageSelector } from "features";
+import { BackButton, LanguageSelector, ThemeButton } from "features";
 import { useLocation } from "react-router";
 
 export const Navigation = () => {
   const isBackButtonShown = useLocation().pathname !== "/";
 
   return (
-    <header>
-      <nav className="bg-black py-4">
+    <header className="border">
+      <nav className="py-4">
         <CenterContainer>
           <div className="mx-auto flex justify-between">
             <div>{isBackButtonShown && <BackButton />}</div>
-            <LanguageSelector />
+            <div className="flex gap-4">
+              <ThemeButton />
+              <LanguageSelector />
+            </div>
           </div>
         </CenterContainer>
       </nav>

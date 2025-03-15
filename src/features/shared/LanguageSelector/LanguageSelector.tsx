@@ -26,7 +26,7 @@ export const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon">
+        <Button variant="ghost" size="icon">
           <Languages />
         </Button>
       </DropdownMenuTrigger>
