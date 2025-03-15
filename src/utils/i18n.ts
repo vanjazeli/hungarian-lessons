@@ -13,6 +13,14 @@ const resources = {
         "Take part in interactive practice sessions designed to help you improve your Hungarian skills through a variety of exercises and challenges.",
       accusative: "Accusative",
     },
+    accusative: {
+      badge: "Challenge",
+      title: "Accusative",
+      description:
+        "Use -t, -ot, -et, -öt, -at suffixes to form the correct accusative form of a Hungarian word.",
+      listTitle: "Examples:",
+      button: "Start the challenge",
+    },
   },
   hu: {
     mainMenu: {
@@ -21,6 +29,14 @@ const resources = {
       description:
         "Vegyen részt interaktív gyakorlatokon, amelyek célja, hogy különféle gyakorlatokon és kihívásokon keresztül segítsenek fejleszteni magyar nyelvtudását.",
       accusative: "Tárgyeset",
+    },
+    accusative: {
+      badge: "Kihívás",
+      title: "Tárgyeset",
+      description:
+        "Használja a -t, -ot, -et, -öt, -at ragokat a magyar szó helyes tárgyeseti formájának kialakításához.",
+      listTitle: "Példák:",
+      button: "Kihívás indítása",
     },
   },
 };

@@ -3,5 +3,5 @@ type CenterContainerProps = {
 };
 
 export const CenterContainer = ({ children }: CenterContainerProps) => {
-  return <div className="container mx-auto max-w-lg px-4">{children}</div>;
+  return <div className="container mx-auto max-w-sm px-4">{children}</div>;
 };
