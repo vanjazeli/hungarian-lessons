@@ -1,7 +1,8 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 type AccusativeIntroProps = {
   setIsChallengeActive: Dispatch<SetStateAction<boolean>>;
@@ -21,8 +22,46 @@ export const AccusativeIntro = ({
       <Badge variant="outline">{t("badge")}</Badge>
       <Typography variant="h1">{t("title")}</Typography>
       <Typography variant="p">{t("description")}</Typography>
-      <div className="flex flex-col gap-2">
-        <Typography className="w-20" variant="span">
+      <VerticalStack className="gap-2">
+        <Typography variant="h2">Sources:</Typography>
+        <ul className="flex flex-wrap gap-2">
+          <li>
+            <Badge variant="secondary" asChild>
+              <Link
+                to="https://betterhungarian.com/2018/04/15/hungarian-accusative-case-t-ot-at-et-ot/comment-page-1/"
+                target="_blank"
+              >
+                Better Hungarian
+                <ExternalLink />
+              </Link>
+            </Badge>
+          </li>
+          <li>
+            <Badge variant="secondary" asChild>
+              <Link
+                to="http://www.hungarianreference.com/Nouns/-t-accusative.aspx"
+                target="_blank"
+              >
+                Hungarian Reference
+                <ExternalLink />
+              </Link>
+            </Badge>
+          </li>
+          <li>
+            <Badge variant="secondary" asChild>
+              <Link
+                to="http://www.hungarianreference.com/Nouns/-t-accusative.aspx"
+                target="_blank"
+              >
+                lingly.ai
+                <ExternalLink />
+              </Link>
+            </Badge>
+          </li>
+        </ul>
+      </VerticalStack>
+      <VerticalStack className="gap-2">
+        <Typography className="w-20" variant="h2">
           {t("listTitle")}
         </Typography>
         <ul>
@@ -87,7 +126,7 @@ export const AccusativeIntro = ({
             </Typography>
           </li>
         </ul>
-      </div>
+      </VerticalStack>
       <Button className="self-end" onClick={handleClick}>
         {t("button")}
         <ArrowRight />

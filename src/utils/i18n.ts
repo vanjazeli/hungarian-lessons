@@ -21,7 +21,7 @@ const resources = {
       listTitle: "Examples:",
       button: "Start the challenge",
       challenge: {
-        placeholder: "Input your answer...",
+        placeholder: "Your answer...",
         next: "Next",
         finish: "Finish",
       },
@@ -43,7 +43,7 @@ const resources = {
       listTitle: "Példák:",
       button: "Kihívás indítása",
       challenge: {
-        placeholder: "Adja meg a válaszát...",
+        placeholder: "Válasza...",
         next: "Tovább",
         finish: "Kész",
       },
