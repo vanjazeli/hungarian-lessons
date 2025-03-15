@@ -88,7 +88,7 @@ export const AccusativeIntro = ({
           </li>
         </ul>
       </div>
-      <Button onClick={handleClick}>
+      <Button className="self-end" onClick={handleClick}>
         {t("button")}
         <ArrowRight />
       </Button>

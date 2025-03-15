@@ -10,13 +10,17 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
+  Button,
 } from "components";
 import { getRandomQuestions } from "./AccusativeChallenge.utils";
 import { accusativeChallengeQuestions } from "./AccusativeChallenge.consts";
 import { useRef, useState } from "react";
 import { Keyboard } from "features";
+import { useTranslation } from "react-i18next";
 
 export const AccusativeChallenge = () => {
+  const { t } = useTranslation("accusative");
+
   const [_, setApi] = useState<CarouselApi | null>(null);
 
   const numberOfQuestions = 10;
@@ -56,8 +60,17 @@ export const AccusativeChallenge = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <Input value={input} onChange={handleChange} />
-      <Keyboard setInput={setInput} />
+      <form className="flex gap-4">
+        <Input
+          placeholder={t("challenge.placeholder")}
+          value={input}
+          onChange={handleChange}
+        />
+        <Button className="min-w-24">
+          {true ? t("challenge.next") : t("challenge.finish")}
+        </Button>
+      </form>
+      <Keyboard className="mx-auto max-w-sm" setInput={setInput} />
     </VerticalStack>
   );
 };

@@ -1,19 +1,23 @@
 import { Button } from "components";
+import { cn } from "lib";
 import { Dispatch, SetStateAction } from "react";
 
 const letters = ["á", "é", "í", "ó", "ö", "ő", "ú", "ü", "ű"];
 
-type KeyboardProps = {
+type KeyboardProps = React.HTMLAttributes<HTMLDivElement> & {
   setInput: Dispatch<SetStateAction<string>>;
 };
 
-export const Keyboard = ({ setInput }: KeyboardProps) => {
+export const Keyboard = ({ className, setInput, ...props }: KeyboardProps) => {
   const handleClick = (letter: string) => {
     setInput((prev) => prev + letter);
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div
+      className={cn("flex flex-wrap justify-center gap-4", className)}
+      {...props}
+    >
       {letters.map((letter, index) => (
         <Button
           variant="outline"

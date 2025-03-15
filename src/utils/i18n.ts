@@ -20,6 +20,11 @@ const resources = {
         "For each word presented, input the correct Hungarian accusative form into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.",
       listTitle: "Examples:",
       button: "Start the challenge",
+      challenge: {
+        placeholder: "Input your answer...",
+        next: "Next",
+        finish: "Finish",
+      },
     },
   },
   hu: {
@@ -37,6 +42,11 @@ const resources = {
         "Minden bemutatott szó esetén írja be a mezőbe a helyes magyar accusative formáját a megfelelő képzők használatával: -t, -ot, -et, -öt, vagy -at.",
       listTitle: "Példák:",
       button: "Kihívás indítása",
+      challenge: {
+        placeholder: "Adja meg a válaszát...",
+        next: "Tovább",
+        finish: "Kész",
+      },
     },
   },
 };
