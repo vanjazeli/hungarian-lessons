@@ -8,4 +8,7 @@ export * from "./ui/badge";
 export * from "./ui/button";
 export * from "./ui/carousel";
 export * from "./ui/dropdown-menu";
+export * from "./ui/input";
+export * from "./ui/progress";
+export * from "./ui/tooltip";
 export * from "./ui/typography";
