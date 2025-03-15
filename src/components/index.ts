@@ -1,6 +1,6 @@
 export * from "./containers/CenterContainer/CenterContainer";
 export * from "./containers/VerticalStack/VerticalStack";
-export * from "./layouts/CenterLayout/CenterLayout";
+export * from "./layouts/MainLayout/MainLayout";
 export * from "./providers/AppProvider/AppProvider";
 export * from "./providers/RouteProvider/RouteProvider";
 export * from "./ui/badge";

@@ -1,11 +1,11 @@
 import { CenterContainer } from "components";
 import { Navigation } from "features";
 
-type CenterLayoutProps = {
+type MainLayoutProps = {
   children: React.ReactNode;
 };
 
-export const CenterLayout = ({ children }: CenterLayoutProps) => {
+export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navigation />
