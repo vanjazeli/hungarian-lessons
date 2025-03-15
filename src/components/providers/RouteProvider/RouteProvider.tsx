@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { BrowserRouter as Router } from "react-router";
+import { HashRouter as Router } from "react-router";
 
 type RouteProviderProps = {
   children: ReactNode;
