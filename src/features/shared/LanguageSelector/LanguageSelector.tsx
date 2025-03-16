@@ -4,12 +4,13 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
+  Typography,
 } from "components";
 import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const LanguageSelector = () => {
-  const { i18n } = useTranslation("navigation");
+  const { i18n, t } = useTranslation("navigation");
 
   const { changeLanguage, language } = i18n;
   const langaugeOptions = [
@@ -28,6 +29,9 @@ export const LanguageSelector = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
           <Languages />
+          <Typography className="sr-only" variant="span">
+            {t("language")}
+          </Typography>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

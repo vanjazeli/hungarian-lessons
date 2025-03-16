@@ -6,6 +6,17 @@ import { initReactI18next } from "react-i18next";
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 const resources = {
   en: {
+    navigation: {
+      back: "Back.",
+      theme: "Toggle between dark and light mode.",
+      langauge: "Language selector.",
+      confirmationDialog: {
+        title: "Are you sure you want to exit?",
+        description: "Your current progress will be lost if you proceed.",
+        cancel: "Cancel",
+        confirm: "Exit",
+      },
+    },
     mainMenu: {
       badge: "Main Menu",
       title: "Let's improve your Hungarian skills together!",
@@ -28,6 +39,17 @@ const resources = {
     },
   },
   hu: {
+    navigation: {
+      back: "Vissza.",
+      theme: "Váltás sötét és világos mód között.",
+      langauge: "Nyelvválasztó.",
+      confirmationDialog: {
+        title: "Biztosan ki akarsz lépni?",
+        description: "A jelenlegi előrehaladásod elveszik, ha folytatod.",
+        cancel: "Mégse",
+        confirm: "Kilépés",
+      },
+    },
     mainMenu: {
       badge: "Főmenü",
       title: "Fejlesszük együtt a magyar nyelvtudásodat!",

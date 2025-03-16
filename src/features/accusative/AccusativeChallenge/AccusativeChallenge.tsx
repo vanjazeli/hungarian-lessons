@@ -13,7 +13,12 @@ import {
   Button,
 } from "components";
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { Keyboard, useAccusativePanelStore } from "features";
+import { cn } from "lib";
+import {
+  Keyboard,
+  useAccusativePanelStore,
+  useBackButtonStore,
+} from "features";
 import { useTranslation } from "react-i18next";
 import { accusativeChallengeQuestions } from "./AccusativeChallenge.consts";
 import {
@@ -41,6 +46,8 @@ export const AccusativeChallenge = () => {
     setScore,
     resetChallengeState,
   } = useAccusativePanelStore();
+
+  const { setIsConfirmationRequired } = useBackButtonStore();
 
   const inputFieldRef = useRef<HTMLInputElement>(null);
 
@@ -77,8 +84,11 @@ export const AccusativeChallenge = () => {
   }, [inputValue]);
 
   useEffect(() => {
+    setIsConfirmationRequired(true);
+
     return () => {
       resetChallengeState();
+      setIsConfirmationRequired(false);
     };
   }, [resetChallengeState]);
 
@@ -93,7 +103,10 @@ export const AccusativeChallenge = () => {
         <CarouselContent>
           {questions.map(({ noun, translation }, index) => (
             <CarouselItem
-              className="flex aspect-[2] items-center justify-center"
+              className={cn(
+                "flex aspect-[2] items-center justify-center",
+                currentQuestionIndex !== index ? "hidden" : ""
+              )}
               key={index}
             >
               <Tooltip>
