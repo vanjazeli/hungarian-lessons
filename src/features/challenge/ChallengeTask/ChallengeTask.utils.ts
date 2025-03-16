@@ -1,9 +1,9 @@
-import { AccusativeChallengeQuestions } from "./AccusativeChallenge.types";
+import { ChallengeTaskQuestions } from "./ChallengeTask.types";
 
 export const getRandomQuestions = (
-  nouns: AccusativeChallengeQuestions,
+  nouns: ChallengeTaskQuestions,
   count: number
-): AccusativeChallengeQuestions => {
+): ChallengeTaskQuestions => {
   const shuffled = [...nouns].sort(() => Math.random() - 0.5);
 
   return shuffled.slice(0, count);

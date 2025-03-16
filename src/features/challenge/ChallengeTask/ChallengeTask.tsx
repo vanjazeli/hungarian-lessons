@@ -14,25 +14,21 @@ import {
 } from "components";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { cn } from "lib";
-import {
-  Keyboard,
-  useAccusativePanelStore,
-  useBackButtonStore,
-} from "features";
+import { Keyboard, useChallengePanelStore, useBackButtonStore } from "features";
 import { useTranslation } from "react-i18next";
-import { accusativeChallengeQuestions } from "./AccusativeChallenge.consts";
+import { challengeTaskQuestions } from "./ChallengeTask.consts";
 import {
   getRandomQuestions,
   isLocaleStringMatch,
   isLastQuestion,
-} from "./AccusativeChallenge.utils";
-import { AccusativePanelState } from "../AccusativePanel/AccusativePanel.types";
+} from "./ChallengeTask.utils";
+import { ChallengePanelState } from "../ChallengePanel/ChallengePanel.types";
 
-export const AccusativeChallenge = () => {
+export const ChallengeTask = () => {
   const { t } = useTranslation("accusative");
 
   const { current: questions } = useRef(
-    getRandomQuestions(accusativeChallengeQuestions, 10)
+    getRandomQuestions(challengeTaskQuestions, 10)
   );
 
   const [api, setApi] = useState<CarouselApi | null>(null);
@@ -45,7 +41,7 @@ export const AccusativeChallenge = () => {
     setPanelState,
     setScore,
     resetChallengeState,
-  } = useAccusativePanelStore();
+  } = useChallengePanelStore();
 
   const { setIsConfirmationRequired } = useBackButtonStore();
 
@@ -71,7 +67,7 @@ export const AccusativeChallenge = () => {
       setCurrentQuestionIndex((prev) => prev + 1);
       api?.scrollNext();
     } else {
-      setPanelState(AccusativePanelState.SCORE);
+      setPanelState(ChallengePanelState.SCORE);
     }
 
     setInputValue("");

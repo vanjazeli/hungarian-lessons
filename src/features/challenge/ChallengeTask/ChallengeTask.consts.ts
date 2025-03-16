@@ -1,6 +1,6 @@
-import { AccusativeChallengeQuestions } from "./AccusativeChallenge.types";
+import { ChallengeTaskQuestions } from "./ChallengeTask.types";
 
-export const accusativeChallengeQuestions: AccusativeChallengeQuestions = [
+export const challengeTaskQuestions: ChallengeTaskQuestions = [
   { noun: "kutya", correctAnswer: "kutyát", translation: "dog" },
   { noun: "macska", correctAnswer: "macskát", translation: "cat" },
   { noun: "autó", correctAnswer: "autót", translation: "car" },

@@ -1,4 +1,4 @@
-import { useAccusativePanelStore } from "features";
+import { useChallengePanelStore } from "features";
 import { Button } from "components";
 import { cn } from "lib";
 
@@ -7,7 +7,7 @@ const letters = ["á", "é", "í", "ó", "ö", "ő", "ú", "ü", "ű"];
 type KeyboardProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const Keyboard = ({ className, ...props }: KeyboardProps) => {
-  const { inputValue, setInputValue } = useAccusativePanelStore();
+  const { inputValue, setInputValue } = useChallengePanelStore();
 
   const handleClick = (letter: string) => {
     setInputValue(inputValue + letter);

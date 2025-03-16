@@ -1,13 +1,13 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
-import { AccusativePanelState } from "./AccusativePanel.types";
+import { ChallengePanelState } from "./ChallengePanel.types";
 
-type AccusativePanelStore = {
-  panelState: AccusativePanelState;
+type ChallengePanelStore = {
+  panelState: ChallengePanelState;
   setPanelState: (
     panelState:
-      | AccusativePanelState
-      | ((prev: AccusativePanelState) => AccusativePanelState)
+      | ChallengePanelState
+      | ((prev: ChallengePanelState) => ChallengePanelState)
   ) => void;
   inputValue: string;
   setInputValue: (inputValue: string | ((prev: string) => string)) => void;
@@ -21,9 +21,9 @@ type AccusativePanelStore = {
   resetStore(): void;
 };
 
-export const useAccusativePanelStore = create<AccusativePanelStore>()(
+export const useChallengePanelStore = create<ChallengePanelStore>()(
   immer((set) => ({
-    panelState: AccusativePanelState.INTRO,
+    panelState: ChallengePanelState.INTRO,
     setPanelState: (update) =>
       set((state) => {
         state.panelState =
@@ -56,7 +56,7 @@ export const useAccusativePanelStore = create<AccusativePanelStore>()(
       }),
     resetStore: () =>
       set((state) => {
-        state.panelState = AccusativePanelState.INTRO;
+        state.panelState = ChallengePanelState.INTRO;
         state.inputValue = "";
         state.currentQuestionIndex = 0;
         state.score = 0;

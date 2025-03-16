@@ -1,10 +1,10 @@
-import { AccusativePanel } from "features";
+import { ChallengePanel } from "features";
 import { MainLayout } from "components";
 
 export const Accusative = () => {
   return (
     <MainLayout>
-      <AccusativePanel />
+      <ChallengePanel />
     </MainLayout>
   );
 };

@@ -2,16 +2,16 @@ import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink, Swords } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
-import { useAccusativePanelStore } from "features";
-import { AccusativePanelState } from "../AccusativePanel/AccusativePanel.types";
+import { useChallengePanelStore } from "features";
+import { ChallengePanelState } from "../ChallengePanel/ChallengePanel.types";
 
-export const AccusativeIntro = () => {
+export const ChallengeIntro = () => {
   const { t } = useTranslation("accusative");
 
-  const { setPanelState } = useAccusativePanelStore();
+  const { setPanelState } = useChallengePanelStore();
 
   const handleClick = () => {
-    setPanelState(AccusativePanelState.CHALLENGE);
+    setPanelState(ChallengePanelState.TASK);
   };
 
   return (
