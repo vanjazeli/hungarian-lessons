@@ -44,8 +44,8 @@ const resources = {
       theme: "Váltás sötét és világos mód között.",
       language: "Nyelvválasztó.",
       confirmationDialog: {
-        title: "Biztosan ki akarsz lépni?",
-        description: "A jelenlegi előrehaladásod elveszik, ha folytatod.",
+        title: "Biztosan ki akar lépni?",
+        description: "A jelenlegi előrehaladása el fog veszni, ha folytatja.",
         cancel: "Mégse",
         confirm: "Kilépés",
       },
