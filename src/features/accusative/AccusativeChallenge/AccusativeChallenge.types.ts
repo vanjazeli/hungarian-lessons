@@ -1,6 +1,6 @@
 export interface AccusativeChallengeQuestion {
   noun: string;
-  answer: string;
+  correctAnswer: string;
   translation: string;
 }
 

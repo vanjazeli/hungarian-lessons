@@ -1,6 +1,7 @@
 export * from "./accusative/AccusativeChallenge/AccusativeChallenge";
 export * from "./accusative/AccusativeIntro/AccusativeIntro";
 export * from "./accusative/AccusativePanel/AccusativePanel";
+export * from "./accusative/AccusativePanel/useAccusativePanelStore";
 export * from "./shared/BackButton/BackButton";
 export * from "./shared/Keyboard/Keyboard";
 export * from "./shared/LanguageSelector/LanguageSelector";

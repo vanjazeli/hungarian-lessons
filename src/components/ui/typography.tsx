@@ -24,7 +24,7 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-4xl font-bold ${muted ? "text-muted-foreground" : ""}`,
-            className,
+            className
           )}
           {...props}
         />
@@ -34,7 +34,7 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-xl font-bold ${muted ? "text-muted-foreground" : ""}`,
-            className,
+            className
           )}
           {...props}
         />
@@ -44,7 +44,7 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-l font-bold ${muted ? "text-muted-foreground" : ""}`,
-            className,
+            className
           )}
           {...props}
         />
@@ -54,7 +54,7 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-base font-normal ${muted ? "text-muted-foreground" : ""}`,
-            className,
+            className
           )}
           {...props}
         />
@@ -64,7 +64,7 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-base font-normal ${muted ? "text-muted-foreground" : ""}`,
-            className,
+            className
           )}
           {...props}
         />

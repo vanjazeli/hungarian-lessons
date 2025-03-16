@@ -1,16 +1,22 @@
 import { AccusativeChallenge, AccusativeIntro } from "features";
-import { useState } from "react";
+import { useAccusativePanelStore } from "./useAccusativePanelStore";
+import { useEffect } from "react";
+import { AccusativePanelState } from "./AccusativePanel.types";
 
 export const AccusativePanel = () => {
-  const [isChallengeActive, setIsChallengeActive] = useState(false);
+  const { score, panelState, resetStore } = useAccusativePanelStore();
+
+  useEffect(() => {
+    return () => {
+      resetStore();
+    };
+  }, [resetStore]);
 
   return (
     <div>
-      {!isChallengeActive ? (
-        <AccusativeIntro setIsChallengeActive={setIsChallengeActive} />
-      ) : (
-        <AccusativeChallenge />
-      )}
+      {panelState === AccusativePanelState.INTRO && <AccusativeIntro />}
+      {panelState === AccusativePanelState.CHALLENGE && <AccusativeChallenge />}
+      {panelState === AccusativePanelState.SCORE && <div>{score}</div>}
     </div>
   );
 };

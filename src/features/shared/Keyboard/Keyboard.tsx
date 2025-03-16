@@ -1,16 +1,16 @@
+import { useAccusativePanelStore } from "features";
 import { Button } from "components";
 import { cn } from "lib";
-import { Dispatch, SetStateAction } from "react";
 
 const letters = ["á", "é", "í", "ó", "ö", "ő", "ú", "ü", "ű"];
 
-type KeyboardProps = React.HTMLAttributes<HTMLDivElement> & {
-  setInput: Dispatch<SetStateAction<string>>;
-};
+type KeyboardProps = React.HTMLAttributes<HTMLDivElement>;
 
-export const Keyboard = ({ className, setInput, ...props }: KeyboardProps) => {
+export const Keyboard = ({ className, ...props }: KeyboardProps) => {
+  const { inputValue, setInputValue } = useAccusativePanelStore();
+
   const handleClick = (letter: string) => {
-    setInput((prev) => prev + letter);
+    setInputValue(inputValue + letter);
   };
 
   return (

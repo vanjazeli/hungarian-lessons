@@ -1,20 +1,17 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import { useAccusativePanelStore } from "features";
+import { AccusativePanelState } from "../AccusativePanel/AccusativePanel.types";
 
-type AccusativeIntroProps = {
-  setIsChallengeActive: Dispatch<SetStateAction<boolean>>;
-};
-
-export const AccusativeIntro = ({
-  setIsChallengeActive,
-}: AccusativeIntroProps) => {
+export const AccusativeIntro = () => {
   const { t } = useTranslation("accusative");
 
+  const { setPanelState } = useAccusativePanelStore();
+
   const handleClick = () => {
-    setIsChallengeActive(true);
+    setPanelState(AccusativePanelState.CHALLENGE);
   };
 
   return (
