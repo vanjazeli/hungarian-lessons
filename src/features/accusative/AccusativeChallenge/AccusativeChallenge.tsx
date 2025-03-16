@@ -27,7 +27,7 @@ export const AccusativeChallenge = () => {
   const { t } = useTranslation("accusative");
 
   const { current: questions } = useRef(
-    getRandomQuestions(accusativeChallengeQuestions, 3)
+    getRandomQuestions(accusativeChallengeQuestions, 10)
   );
 
   const [api, setApi] = useState<CarouselApi | null>(null);
