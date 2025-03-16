@@ -90,7 +90,7 @@ export const AccusativeChallenge = () => {
       resetChallengeState();
       setIsConfirmationRequired(false);
     };
-  }, [resetChallengeState]);
+  }, [resetChallengeState, setIsConfirmationRequired]);
 
   return (
     <VerticalStack>

@@ -20,7 +20,7 @@ export const AccusativeIntro = () => {
       <Typography variant="h1">{t("title")}</Typography>
       <Typography variant="p">{t("description")}</Typography>
       <VerticalStack className="gap-2">
-        <Typography variant="h2">Sources:</Typography>
+        <Typography variant="h2">{t("sourcesTitle")}</Typography>
         <ul className="flex flex-wrap gap-2">
           <li>
             <Badge variant="secondary" asChild>
