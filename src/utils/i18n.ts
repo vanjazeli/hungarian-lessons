@@ -9,7 +9,7 @@ const resources = {
     navigation: {
       back: "Back.",
       theme: "Toggle between dark and light mode.",
-      langauge: "Language selector.",
+      language: "Language selector.",
       confirmationDialog: {
         title: "Are you sure you want to exit?",
         description: "Your current progress will be lost if you proceed.",
@@ -42,7 +42,7 @@ const resources = {
     navigation: {
       back: "Vissza.",
       theme: "Váltás sötét és világos mód között.",
-      langauge: "Nyelvválasztó.",
+      language: "Nyelvválasztó.",
       confirmationDialog: {
         title: "Biztosan ki akarsz lépni?",
         description: "A jelenlegi előrehaladásod elveszik, ha folytatod.",

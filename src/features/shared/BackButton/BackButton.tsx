@@ -42,9 +42,11 @@ export const BackButton = (props: ButtonProps) => {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>{"confirmationDialog.cancel"}</AlertDialogCancel>
+            <AlertDialogCancel>
+              {t("confirmationDialog.cancel")}
+            </AlertDialogCancel>
             <AlertDialogAction asChild>
-              <Link to="/">{"confirmationDialog.confirm"}</Link>
+              <Link to="/">{t("confirmationDialog.confirm")}</Link>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
