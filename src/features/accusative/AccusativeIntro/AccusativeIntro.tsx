@@ -50,7 +50,7 @@ export const AccusativeIntro = ({
           <li>
             <Badge variant="secondary" asChild>
               <Link
-                to="http://www.hungarianreference.com/Nouns/-t-accusative.aspx"
+                to="https://www.lingly.ai/blog/understanding-the-accusative-case-in-hungarian"
                 target="_blank"
               >
                 lingly.ai
