@@ -1,5 +1,5 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Swords } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { useAccusativePanelStore } from "features";
@@ -126,7 +126,7 @@ export const AccusativeIntro = () => {
       </VerticalStack>
       <Button className="self-end" onClick={handleClick}>
         {t("button")}
-        <ArrowRight />
+        <Swords />
       </Button>
     </VerticalStack>
   );
