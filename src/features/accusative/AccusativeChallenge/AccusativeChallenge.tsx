@@ -103,14 +103,14 @@ export const AccusativeChallenge = () => {
         <CarouselContent>
           {questions.map(({ noun, translation }, index) => (
             <CarouselItem
-              className={cn(
-                "flex aspect-[2] items-center justify-center",
-                currentQuestionIndex !== index ? "hidden" : ""
-              )}
+              className={cn("flex aspect-[2] items-center justify-center")}
               key={index}
             >
               <Tooltip>
-                <TooltipTrigger className="outline-none" tabIndex={1}>
+                <TooltipTrigger
+                  className="outline-none"
+                  tabIndex={currentQuestionIndex !== index ? -1 : 0}
+                >
                   <Typography
                     className="border-foreground border-b-2 border-dashed"
                     variant="h2"
