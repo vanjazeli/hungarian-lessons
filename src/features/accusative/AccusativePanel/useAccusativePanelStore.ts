@@ -5,7 +5,7 @@ import { AccusativePanelState } from "./AccusativePanel.types";
 type AccusativePanelStore = {
   panelState: AccusativePanelState;
   setPanelState: (
-    inputValue:
+    panelState:
       | AccusativePanelState
       | ((prev: AccusativePanelState) => AccusativePanelState)
   ) => void;
