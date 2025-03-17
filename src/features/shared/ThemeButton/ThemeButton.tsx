@@ -7,11 +7,11 @@ export const ThemeButton = () => {
   const { t } = useTranslation("navigation");
 
   const [isDark, setIsDark] = useState(
-    document.body.classList.contains("dark")
+    document.documentElement.classList.contains("dark")
   );
 
   const handleClick = () => {
-    document.body.classList.toggle("dark");
+    document.documentElement.classList.toggle("dark");
     setIsDark((prev) => !prev);
   };
 
