@@ -14,15 +14,16 @@ import {
 } from "components";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { cn } from "lib";
-import { Keyboard, useChallengePanelStore, useBackButtonStore } from "features";
+import {
+  Keyboard,
+  useChallengePanelStore,
+  useBackButtonStore,
+  ChallengePanelState,
+  ScoreItem,
+} from "features";
 import { useTranslation } from "react-i18next";
 import { challengeTaskQuestions } from "./ChallengeTask.consts";
-import {
-  getRandomQuestions,
-  isLocaleStringMatch,
-  isLastQuestion,
-} from "./ChallengeTask.utils";
-import { ChallengePanelState } from "../ChallengePanel/ChallengePanel.types";
+import { getRandomQuestions, isLastQuestion } from "./ChallengeTask.utils";
 
 export const ChallengeTask = () => {
   const { t } = useTranslation("accusative");
@@ -39,6 +40,7 @@ export const ChallengeTask = () => {
     currentQuestionIndex,
     setCurrentQuestionIndex,
     setPanelState,
+    score,
     setScore,
     resetChallengeState,
   } = useChallengePanelStore();
@@ -54,21 +56,20 @@ export const ChallengeTask = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    if (
-      isLocaleStringMatch(
-        inputValue,
-        questions[currentQuestionIndex].correctAnswer
-      )
-    ) {
-      setScore((prev) => prev + 1);
-    }
-
     if (!isLastQuestion(currentQuestionIndex, questions.length)) {
       setCurrentQuestionIndex((prev) => prev + 1);
       api?.scrollNext();
     } else {
       setPanelState(ChallengePanelState.SCORE);
     }
+
+    setScore((prev) => [
+      ...prev,
+      {
+        ...questions[currentQuestionIndex],
+        userAnswer: inputValue,
+      } as ScoreItem,
+    ]);
 
     setInputValue("");
   };

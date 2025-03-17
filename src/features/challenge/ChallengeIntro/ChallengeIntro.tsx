@@ -2,8 +2,7 @@ import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink, Swords } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
-import { useChallengePanelStore } from "features";
-import { ChallengePanelState } from "../ChallengePanel/ChallengePanel.types";
+import { useChallengePanelStore, ChallengePanelState } from "features";
 
 export const ChallengeIntro = () => {
   const { t } = useTranslation("accusative");
