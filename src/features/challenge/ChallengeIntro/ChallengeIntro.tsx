@@ -1,5 +1,5 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
-import { ArrowRight, ExternalLink, Swords } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { useChallengePanelStore, ChallengePanelState } from "features";
