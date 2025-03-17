@@ -18,7 +18,7 @@ const resources = {
       },
     },
     mainMenu: {
-      badge: "Main Menu",
+      badge: "Main menu",
       title: "Let's improve your Hungarian skills together!",
       description:
         "Take part in interactive practice sessions designed to help you improve your Hungarian skills through a variety of exercises and challenges.",
@@ -31,11 +31,23 @@ const resources = {
         "For each word presented, input the correct Hungarian accusative form into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.",
       sourcesTitle: "Sources:",
       listTitle: "Examples:",
-      button: "Start the challenge",
+      button: "Start",
       challenge: {
         placeholder: "Your answer...",
         next: "Next",
         finish: "Finish",
+      },
+      scoreboard: {
+        title: "Score:",
+        repeat: "Repeat",
+        description:
+          "Not satisfied with your score? No worries, champions are made through practice. Hit that retry button and prove yourself!",
+        tableSummary: "Challenge score summary",
+        noun: "Noun",
+        translation: "Translation",
+        userAnswer: "Your answer",
+        correctAnswer: "Correct answer",
+        link: "Main menu",
       },
     },
   },
@@ -65,11 +77,23 @@ const resources = {
         "Minden bemutatott szó esetén írja be a mezőbe a helyes magyar accusative formáját a megfelelő képzők használatával: -t, -ot, -et, -öt, vagy -at.",
       sourcesTitle: "Források:",
       listTitle: "Példák:",
-      button: "Kihívás indítása",
+      button: "Indítás",
       challenge: {
         placeholder: "Válasza...",
         next: "Tovább",
         finish: "Kész",
+      },
+      scoreboard: {
+        title: "Pontszám:",
+        repeat: "Újra",
+        description:
+          "Nem elégedett a pontszámával? Semmi gond, a bajnokok gyakorlással születnek—nyomja meg az újrapróbálás gombot, és mutassa meg, mire képes!",
+        tableSummary: "Kihívás pontszámának összegzése",
+        noun: "Főnév",
+        translation: "Fordítás",
+        userAnswer: "A válasza",
+        correctAnswer: "Helyes válasz",
+        link: "Főmenü",
       },
     },
   },

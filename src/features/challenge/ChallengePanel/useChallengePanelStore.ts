@@ -19,6 +19,7 @@ type ChallengePanelStore = {
   score: ScoreItems;
   setScore: (score: ScoreItems | ((prev: ScoreItems) => ScoreItems)) => void;
   resetChallengeState(): void;
+  resetScore(): void;
   resetStore(): void;
 };
 
@@ -55,6 +56,11 @@ export const useChallengePanelStore = create<ChallengePanelStore>()(
         state.inputValue = "";
         state.currentQuestionIndex = 0;
       }),
+    resetScore: () => {
+      set((state) => {
+        state.score = [];
+      });
+    },
     resetStore: () =>
       set((state) => {
         state.panelState = ChallengePanelState.INTRO;

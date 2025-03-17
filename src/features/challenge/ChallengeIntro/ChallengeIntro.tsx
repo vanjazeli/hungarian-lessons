@@ -125,7 +125,7 @@ export const ChallengeIntro = () => {
       </VerticalStack>
       <Button className="self-end" onClick={handleClick}>
         {t("button")}
-        <Swords />
+        <ArrowRight />
       </Button>
     </VerticalStack>
   );

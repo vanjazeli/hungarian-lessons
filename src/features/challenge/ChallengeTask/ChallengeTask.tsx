@@ -40,7 +40,6 @@ export const ChallengeTask = () => {
     currentQuestionIndex,
     setCurrentQuestionIndex,
     setPanelState,
-    score,
     setScore,
     resetChallengeState,
   } = useChallengePanelStore();
@@ -55,6 +54,8 @@ export const ChallengeTask = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    inputFieldRef.current?.focus();
 
     if (!isLastQuestion(currentQuestionIndex, questions.length)) {
       setCurrentQuestionIndex((prev) => prev + 1);
