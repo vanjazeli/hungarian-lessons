@@ -66,23 +66,30 @@ export const ChallengeScore = () => {
         </TableHeader>
         <TableBody>
           {score.map(
-            ({ noun, userAnswer, correctAnswer, translation }, index) => (
-              <TableRow key={index}>
-                <TableCell>{noun}</TableCell>
-                <TableCell>{translation}</TableCell>
-                <TableCell
-                  className={cn(
-                    "font-bold",
-                    isLocaleStringMatch(userAnswer, correctAnswer)
-                      ? "text-green-500"
-                      : "text-red-500"
-                  )}
-                >
-                  {userAnswer ? userAnswer : "-"}
-                </TableCell>
-                <TableCell>{correctAnswer}</TableCell>
-              </TableRow>
-            )
+            ({ noun, userAnswer, correctAnswer, translation }, index) => {
+              const isCorrect = isLocaleStringMatch(userAnswer, correctAnswer);
+
+              return (
+                <TableRow key={index}>
+                  <TableCell>{noun}</TableCell>
+                  <TableCell>{translation}</TableCell>
+                  <TableCell
+                    className={cn(
+                      "font-bold",
+                      isCorrect ? "text-green-500" : "text-red-500"
+                    )}
+                  >
+                    <Typography className="sr-only" variant="span">
+                      {isCorrect
+                        ? t("scoreboard.correctLabel")
+                        : t("scoreboard.wrongLabel")}
+                    </Typography>
+                    {userAnswer ? userAnswer : "-"}
+                  </TableCell>
+                  <TableCell>{correctAnswer}</TableCell>
+                </TableRow>
+              );
+            }
           )}
         </TableBody>
       </Table>
