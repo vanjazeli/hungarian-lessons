@@ -133,6 +133,7 @@ export const ChallengeTask = () => {
           onChange={handleChange}
           spellCheck="false"
           ref={inputFieldRef}
+          autoComplete="off"
         />
         <Button className="min-w-24" type="submit">
           {currentQuestionIndex === questions.length - 1
