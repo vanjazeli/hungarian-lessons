@@ -101,7 +101,10 @@ export const ChallengeTask = () => {
         <CarouselContent>
           {questions.map(({ noun, translation }, index) => (
             <CarouselItem
-              className={cn("flex aspect-[2] items-center justify-center")}
+              className={cn(
+                "flex aspect-[2] items-center justify-center",
+                index !== currentQuestionIndex ? "select-none" : ""
+              )}
               key={index}
             >
               <Tooltip>
