@@ -49,7 +49,7 @@ export const ChallengeTask = () => {
   const inputFieldRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
+    setInputValue(e.target.value.toLowerCase());
   };
 
   const handleSubmit = (e: FormEvent) => {
