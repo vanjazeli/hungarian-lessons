@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { cn } from "@/lib";
 
-type Types = "h1" | "h2" | "h3" | "p" | "span";
+type Types = "h1" | "h2" | "h3" | "p" | "span" | "small";
 
 type TypographyProps = React.HTMLAttributes<HTMLElement> & {
   variant: Types;
@@ -64,6 +64,16 @@ export const Typography = ({
         <Tag
           className={cn(
             `text-base font-normal ${muted ? "text-muted-foreground" : ""}`,
+            className
+          )}
+          {...props}
+        />
+      );
+    case "small":
+      return (
+        <Tag
+          className={cn(
+            `text-xs font-normal ${muted ? "text-muted-foreground" : ""}`,
             className
           )}
           {...props}
