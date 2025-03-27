@@ -2,8 +2,8 @@ import {
   Button,
   Typography,
   VerticalStack,
-  MainLayout,
   Badge,
+  MainLayout,
 } from "components";
 import { Link } from "react-router";
 
