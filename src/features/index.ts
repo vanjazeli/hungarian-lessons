@@ -9,4 +9,5 @@ export * from "./shared/BackButton/BackButton";
 export * from "./shared/BackButton/useBackButtonStore";
 export * from "./shared/Keyboard/Keyboard";
 export * from "./shared/Navigation/Navigation";
+export * from "./shared/SideMenu/SideMenu";
 export * from "./shared/ThemeButton/ThemeButton";

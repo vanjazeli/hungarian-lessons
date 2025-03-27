@@ -1,5 +1,5 @@
 import { CenterContainer } from "components";
-import { BackButton, ThemeButton } from "features";
+import { BackButton, ThemeButton, SideMenu } from "features";
 import { useLocation } from "react-router";
 
 export const Navigation = () => {
@@ -13,6 +13,7 @@ export const Navigation = () => {
             <div>{isBackButtonShown && <BackButton />}</div>
             <div className="flex gap-4">
               <ThemeButton />
+              <SideMenu />
             </div>
           </div>
         </CenterContainer>
