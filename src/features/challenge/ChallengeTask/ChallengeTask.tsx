@@ -21,13 +21,10 @@ import {
   ChallengePanelState,
   ScoreItem,
 } from "features";
-import { useTranslation } from "react-i18next";
 import { challengeTaskQuestions } from "./ChallengeTask.consts";
 import { getRandomQuestions, isLastQuestion } from "./ChallengeTask.utils";
 
 export const ChallengeTask = () => {
-  const { t } = useTranslation("accusative");
-
   const { current: questions } = useRef(
     getRandomQuestions(challengeTaskQuestions, 10)
   );
@@ -128,7 +125,7 @@ export const ChallengeTask = () => {
       </Carousel>
       <form className="flex gap-4" onSubmit={handleSubmit}>
         <Input
-          placeholder={t("challenge.placeholder")}
+          placeholder="Type your answer here..."
           value={inputValue}
           onChange={handleChange}
           spellCheck="false"
@@ -136,9 +133,7 @@ export const ChallengeTask = () => {
           autoComplete="off"
         />
         <Button className="min-w-24" type="submit">
-          {currentQuestionIndex === questions.length - 1
-            ? t("challenge.finish")
-            : t("challenge.next")}
+          {currentQuestionIndex === questions.length - 1 ? "Finish" : "Next"}
         </Button>
       </form>
       <Keyboard className="mx-auto max-w-sm" />

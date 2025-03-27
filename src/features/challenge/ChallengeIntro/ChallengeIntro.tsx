@@ -1,12 +1,9 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { useChallengePanelStore, ChallengePanelState } from "features";
 
 export const ChallengeIntro = () => {
-  const { t } = useTranslation("accusative");
-
   const { setPanelState } = useChallengePanelStore();
 
   const handleClick = () => {
@@ -15,11 +12,14 @@ export const ChallengeIntro = () => {
 
   return (
     <VerticalStack>
-      <Badge variant="outline">{t("badge")}</Badge>
-      <Typography variant="h1">{t("title")}</Typography>
-      <Typography variant="p">{t("description")}</Typography>
+      <Badge variant="outline">Challenge</Badge>
+      <Typography variant="h1">Accusative</Typography>
+      <Typography variant="p">
+        For each word presented, input the correct Hungarian accusative form
+        into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.
+      </Typography>
       <VerticalStack className="gap-2">
-        <Typography variant="h2">{t("sourcesTitle")}</Typography>
+        <Typography variant="h2">Sources:</Typography>
         <ul className="flex flex-wrap gap-2">
           <li>
             <Badge variant="secondary" asChild>
@@ -58,7 +58,7 @@ export const ChallengeIntro = () => {
       </VerticalStack>
       <VerticalStack className="gap-2">
         <Typography className="w-20" variant="h2">
-          {t("listTitle")}
+          Examples:
         </Typography>
         <ul>
           <li className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export const ChallengeIntro = () => {
         </ul>
       </VerticalStack>
       <Button className="self-end" onClick={handleClick}>
-        {t("button")}
+        Start
         <ArrowRight />
       </Button>
     </VerticalStack>

@@ -14,13 +14,10 @@ import {
 } from "components";
 import { ArrowLeft } from "lucide-react";
 import { useBackButtonStore } from "./useBackButtonStore";
-import { useTranslation } from "react-i18next";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const BackButton = (props: ButtonProps) => {
-  const { t } = useTranslation("navigation");
-
   const { isConfirmationRequired } = useBackButtonStore();
 
   if (isConfirmationRequired) {
@@ -30,23 +27,21 @@ export const BackButton = (props: ButtonProps) => {
           <Button variant="ghost" size="icon" {...props}>
             <ArrowLeft />
             <Typography className="sr-only" variant="span">
-              {t("back")}
+              Back
             </Typography>
           </Button>
         </AlertDialogTrigger>
         <AlertDialogContent className="w-sm">
           <AlertDialogHeader>
-            <AlertDialogTitle>{t("confirmationDialog.title")}</AlertDialogTitle>
+            <AlertDialogTitle>Are you sure you want to exit?</AlertDialogTitle>
             <AlertDialogDescription>
-              {t("confirmationDialog.description")}
+              Your current progress will be lost if you proceed.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>
-              {t("confirmationDialog.cancel")}
-            </AlertDialogCancel>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction asChild>
-              <Link to="/">{t("confirmationDialog.confirm")}</Link>
+              <Link to="/">Exit</Link>
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -59,7 +54,7 @@ export const BackButton = (props: ButtonProps) => {
       <Link to="/">
         <ArrowLeft />
         <Typography className="sr-only" variant="span">
-          {t("back")}
+          Back
         </Typography>
       </Link>
     </Button>

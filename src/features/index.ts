@@ -8,6 +8,5 @@ export * from "./challenge/ChallengePanel/useChallengePanelStore";
 export * from "./shared/BackButton/BackButton";
 export * from "./shared/BackButton/useBackButtonStore";
 export * from "./shared/Keyboard/Keyboard";
-export * from "./shared/LanguageSelector/LanguageSelector";
 export * from "./shared/Navigation/Navigation";
 export * from "./shared/ThemeButton/ThemeButton";

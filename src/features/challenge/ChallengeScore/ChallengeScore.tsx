@@ -20,10 +20,8 @@ import { cn } from "lib";
 import { ArrowLeft, RotateCcw } from "lucide-react";
 import { ChallengePanelState } from "features";
 import { Link } from "react-router";
-import { useTranslation } from "react-i18next";
 
 export const ChallengeScore = () => {
-  const { t } = useTranslation("accusative");
   const { score, setPanelState, resetScore } = useChallengePanelStore();
 
   const handleClick = () => {
@@ -33,35 +31,30 @@ export const ChallengeScore = () => {
 
   return (
     <VerticalStack>
-      <Badge variant="outline">{t("badge")}</Badge>
+      <Badge variant="outline">Score</Badge>
       <div className="flex items-center justify-between gap-4">
-        <Typography variant="h1">
-          {t("scoreboard.title")} {calculateScore(score)}
-        </Typography>
+        <Typography variant="h1">Score: {calculateScore(score)}</Typography>
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="ghost" size="icon" onClick={handleClick}>
               <RotateCcw />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>{t("scoreboard.repeat")}</TooltipContent>
+          <TooltipContent>Repeat</TooltipContent>
         </Tooltip>
       </div>
-      <Typography variant="p">{t("scoreboard.description")}</Typography>
+      <Typography variant="p">
+        Not satisfied with your score? No worries, champions are made through
+        practice. Hit that retry button and prove yourself!
+      </Typography>
       <Table>
-        <TableCaption>{t("scoreboard.tableSummary")}</TableCaption>
+        <TableCaption>Challenge score summary</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-1/4">{t("scoreboard.noun")}</TableHead>
-            <TableHead className="w-1/4">
-              {t("scoreboard.translation")}
-            </TableHead>
-            <TableHead className="w-1/4">
-              {t("scoreboard.userAnswer")}
-            </TableHead>
-            <TableHead className="w-1/4">
-              {t("scoreboard.correctAnswer")}
-            </TableHead>
+            <TableHead className="w-1/4">Noun</TableHead>
+            <TableHead className="w-1/4">Translation</TableHead>
+            <TableHead className="w-1/4">Your answer</TableHead>
+            <TableHead className="w-1/4">Correct answer</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -80,9 +73,7 @@ export const ChallengeScore = () => {
                     )}
                   >
                     <Typography className="sr-only" variant="span">
-                      {isCorrect
-                        ? t("scoreboard.correctLabel")
-                        : t("scoreboard.wrongLabel")}
+                      {isCorrect ? "Correct" : "Wrong"}
                     </Typography>
                     {userAnswer ? userAnswer : "-"}
                   </TableCell>
@@ -95,7 +86,7 @@ export const ChallengeScore = () => {
       </Table>
       <Button className="self-start" asChild>
         <Link to="/">
-          <ArrowLeft /> {t("scoreboard.link")}
+          <ArrowLeft /> Main menu
         </Link>
       </Button>
     </VerticalStack>
