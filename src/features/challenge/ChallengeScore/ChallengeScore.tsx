@@ -17,7 +17,7 @@ import {
 import { calculateScore, isLocaleStringMatch } from "./ChallengeScore.utils";
 import { useChallengePanelStore } from "features";
 import { cn } from "lib";
-import { ArrowLeft, RotateCcw } from "lucide-react";
+import { Map, RotateCcw } from "lucide-react";
 import { ChallengePanelState } from "features";
 import { Link } from "@tanstack/react-router";
 
@@ -51,7 +51,7 @@ export const ChallengeScore = () => {
         <TableCaption>Challenge score summary</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-1/4">Noun</TableHead>
+            <TableHead className="w-1/4">Word</TableHead>
             <TableHead className="w-1/4">Translation</TableHead>
             <TableHead className="w-1/4">Your answer</TableHead>
             <TableHead className="w-1/4">Correct answer</TableHead>
@@ -86,7 +86,7 @@ export const ChallengeScore = () => {
       </Table>
       <Button className="self-start" asChild>
         <Link to="/">
-          <ArrowLeft /> Main menu
+          <Map /> Roadmap
         </Link>
       </Button>
     </VerticalStack>
