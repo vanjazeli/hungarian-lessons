@@ -20,6 +20,7 @@ import {
   useChallengePanelStore,
   ChallengePanelState,
   ChallengeScoreItem,
+  lsAddScoreboardItem,
 } from "features";
 import { challengeTaskQuestions } from "./ChallengeTask.consts";
 import { getRandomQuestions, isLastQuestion } from "./ChallengeTask.utils";
@@ -37,6 +38,7 @@ export const ChallengeTask = () => {
     currentQuestionIndex,
     setCurrentQuestionIndex,
     setPanelState,
+    score,
     setScore,
     resetChallengeState,
   } = useChallengePanelStore();
@@ -59,6 +61,7 @@ export const ChallengeTask = () => {
       api?.scrollNext();
     } else {
       setPanelState(ChallengePanelState.SCORE);
+      lsAddScoreboardItem({ challengeName: "Accusative", score });
     }
 
     setScore((prev) => [

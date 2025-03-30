@@ -1,3 +1,4 @@
+import { ScoreboardPanel } from "features";
 import { Badge, Typography, VerticalStack } from "components";
 import { Trophy } from "lucide-react";
 
@@ -12,6 +13,7 @@ export const Scoreboard = () => {
         Ready to see how high you can go? Rack up those scores and let the
         scoreboard do the bragging for you!
       </Typography>
+      <ScoreboardPanel />
     </VerticalStack>
   );
 };

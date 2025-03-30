@@ -13,14 +13,13 @@ import { ChallengeScoreItems } from "features";
 import { isLocaleStringMatch } from "utils";
 
 type ScoreTableProps = {
-  title: string;
   score: ChallengeScoreItems;
 };
 
-export const ScoreTable = ({ title, score }: ScoreTableProps) => {
+export const ScoreTable = ({ score }: ScoreTableProps) => {
   return (
     <Table>
-      <TableCaption>{title}</TableCaption>
+      <TableCaption>Challenge score summary</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-1/4">Word</TableHead>

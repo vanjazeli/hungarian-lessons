@@ -39,7 +39,7 @@ export const ChallengeScore = () => {
         Not satisfied with your score? No worries, champions are made through
         practice. Hit that retry button and prove yourself!
       </Typography>
-      <ScoreTable title="Challenge score summary" score={score} />
+      <ScoreTable score={score} />
       <Button className="self-start" asChild>
         <Link to="/">
           <Map /> Roadmap

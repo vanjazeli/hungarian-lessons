@@ -6,6 +6,7 @@ export * from "./providers/AppProvider/AppProvider";
 export * from "./providers/BlockerProvider/BlockerProvider";
 export * from "./providers/BlockerProvider/useBlockerProviderStore";
 export * from "./providers/RouteProvider/RouteProvider";
+export * from "./ui/accordion";
 export * from "./ui/alert-dialog";
 export * from "./ui/badge";
 export * from "./ui/button";
