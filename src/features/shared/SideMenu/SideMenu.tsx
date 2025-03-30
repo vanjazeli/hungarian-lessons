@@ -7,7 +7,7 @@ import {
   Typography,
   SheetFooter,
 } from "components";
-import { Menu, Swords, Tally5, Map, Trophy } from "lucide-react";
+import { Menu, Swords, Map, Trophy } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export const SideMenu = () => {
