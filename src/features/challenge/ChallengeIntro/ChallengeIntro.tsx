@@ -1,6 +1,5 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { Link } from "@tanstack/react-router";
 import { useChallengePanelStore, ChallengePanelState } from "features";
 
 export const ChallengeIntro = () => {
