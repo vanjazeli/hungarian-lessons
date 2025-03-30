@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 export const MainMenu = () => {
   return (
     <VerticalStack>
-      <Badge variant="outline">Main Menu</Badge>
+      <Badge variant="outline">Roadmap</Badge>
       <Typography variant="h1">
         Let's improve your Hungarian skills together!
       </Typography>

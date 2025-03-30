@@ -10,85 +10,104 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as AccusativeImport } from './routes/accusative'
-import { Route as IndexImport } from './routes/index'
+import { Route as rootRoute } from "./routes/__root";
+import { Route as ScoreboardImport } from "./routes/scoreboard";
+import { Route as AccusativeImport } from "./routes/accusative";
+import { Route as IndexImport } from "./routes/index";
 
 // Create/Update Routes
 
-const AccusativeRoute = AccusativeImport.update({
-  id: '/accusative',
-  path: '/accusative',
+const ScoreboardRoute = ScoreboardImport.update({
+  id: "/scoreboard",
+  path: "/scoreboard",
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
+
+const AccusativeRoute = AccusativeImport.update({
+  id: "/accusative",
+  path: "/accusative",
+  getParentRoute: () => rootRoute,
+} as any);
 
 const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
+  id: "/",
+  path: "/",
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 // Populate the FileRoutesByPath interface
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/accusative': {
-      id: '/accusative'
-      path: '/accusative'
-      fullPath: '/accusative'
-      preLoaderRoute: typeof AccusativeImport
-      parentRoute: typeof rootRoute
-    }
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/accusative": {
+      id: "/accusative";
+      path: "/accusative";
+      fullPath: "/accusative";
+      preLoaderRoute: typeof AccusativeImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/scoreboard": {
+      id: "/scoreboard";
+      path: "/scoreboard";
+      fullPath: "/scoreboard";
+      preLoaderRoute: typeof ScoreboardImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/accusative': typeof AccusativeRoute
+  "/": typeof IndexRoute;
+  "/accusative": typeof AccusativeRoute;
+  "/scoreboard": typeof ScoreboardRoute;
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/accusative': typeof AccusativeRoute
+  "/": typeof IndexRoute;
+  "/accusative": typeof AccusativeRoute;
+  "/scoreboard": typeof ScoreboardRoute;
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/accusative': typeof AccusativeRoute
+  __root__: typeof rootRoute;
+  "/": typeof IndexRoute;
+  "/accusative": typeof AccusativeRoute;
+  "/scoreboard": typeof ScoreboardRoute;
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/accusative'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/accusative'
-  id: '__root__' | '/' | '/accusative'
-  fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths: "/" | "/accusative" | "/scoreboard";
+  fileRoutesByTo: FileRoutesByTo;
+  to: "/" | "/accusative" | "/scoreboard";
+  id: "__root__" | "/" | "/accusative" | "/scoreboard";
+  fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AccusativeRoute: typeof AccusativeRoute
+  IndexRoute: typeof IndexRoute;
+  AccusativeRoute: typeof AccusativeRoute;
+  ScoreboardRoute: typeof ScoreboardRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccusativeRoute: AccusativeRoute,
-}
+  ScoreboardRoute: ScoreboardRoute,
+};
 
 export const routeTree = rootRoute
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();
 
 /* ROUTE_MANIFEST_START
 {
@@ -97,7 +116,8 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/accusative"
+        "/accusative",
+        "/scoreboard"
       ]
     },
     "/": {
@@ -105,6 +125,9 @@ export const routeTree = rootRoute
     },
     "/accusative": {
       "filePath": "accusative.tsx"
+    },
+    "/scoreboard": {
+      "filePath": "scoreboard.tsx"
     }
   }
 }

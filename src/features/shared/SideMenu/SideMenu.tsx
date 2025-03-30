@@ -7,7 +7,7 @@ import {
   Typography,
   SheetFooter,
 } from "components";
-import { Menu, Home, Swords } from "lucide-react";
+import { Menu, Swords, Tally5, Map } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export const SideMenu = () => {
@@ -25,8 +25,8 @@ export const SideMenu = () => {
           <SheetClose asChild>
             <Button className="w-full" asChild variant="ghost">
               <Link to="/">
-                <Home />
-                Homepage
+                <Map />
+                Roadmap
               </Link>
             </Button>
           </SheetClose>
@@ -35,6 +35,14 @@ export const SideMenu = () => {
               <Link to="/accusative">
                 <Swords />
                 Accusative
+              </Link>
+            </Button>
+          </SheetClose>
+          <SheetClose asChild>
+            <Button className="w-full" asChild variant="ghost">
+              <Link to="/scoreboard">
+                <Tally5 />
+                Scoreboard
               </Link>
             </Button>
           </SheetClose>
