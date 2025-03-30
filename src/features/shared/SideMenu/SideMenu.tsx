@@ -7,7 +7,7 @@ import {
   Typography,
   SheetFooter,
 } from "components";
-import { Menu, Swords, Tally5, Map } from "lucide-react";
+import { Menu, Swords, Tally5, Map, Trophy } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export const SideMenu = () => {
@@ -41,7 +41,7 @@ export const SideMenu = () => {
           <SheetClose asChild>
             <Button className="w-full" asChild variant="ghost">
               <Link to="/scoreboard">
-                <Tally5 />
+                <Trophy />
                 Scoreboard
               </Link>
             </Button>

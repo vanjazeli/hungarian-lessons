@@ -1,12 +1,13 @@
 import { Button, Typography, VerticalStack, Badge } from "components";
 import { Link } from "@tanstack/react-router";
+import { Map } from "lucide-react";
 
 export const MainMenu = () => {
   return (
     <VerticalStack>
       <Badge variant="outline">Roadmap</Badge>
-      <Typography variant="h1">
-        Let's improve your Hungarian skills together!
+      <Typography className="flex items-center gap-4" variant="h1">
+        Enjoy the Road <Map className="text-muted-foreground h-8 w-8" />
       </Typography>
       <Typography variant="p" muted>
         Take part in interactive practice sessions designed to help you improve

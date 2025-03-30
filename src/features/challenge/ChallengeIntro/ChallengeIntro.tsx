@@ -1,5 +1,5 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink, Swords } from "lucide-react";
 import { useChallengePanelStore, ChallengePanelState } from "features";
 
 export const ChallengeIntro = () => {
@@ -12,7 +12,9 @@ export const ChallengeIntro = () => {
   return (
     <VerticalStack>
       <Badge variant="outline">Challenge</Badge>
-      <Typography variant="h1">Accusative</Typography>
+      <Typography className="flex items-center gap-4" variant="h1">
+        Accusative <Swords className="text-muted-foreground h-8 w-8" />
+      </Typography>
       <Typography variant="p">
         For each word presented, input the correct Hungarian accusative form
         into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.
