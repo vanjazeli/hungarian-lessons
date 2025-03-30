@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import { ChallengePanelState } from "./ChallengePanel.types";
-import { ScoreItems } from "features";
+import { ChallengeScoreItems } from "features";
 
 type ChallengePanelStore = {
   panelState: ChallengePanelState;
@@ -16,8 +16,12 @@ type ChallengePanelStore = {
   setCurrentQuestionIndex: (
     currentQuestionIndex: number | ((prev: number) => number)
   ) => void;
-  score: ScoreItems;
-  setScore: (score: ScoreItems | ((prev: ScoreItems) => ScoreItems)) => void;
+  score: ChallengeScoreItems;
+  setScore: (
+    score:
+      | ChallengeScoreItems
+      | ((prev: ChallengeScoreItems) => ChallengeScoreItems)
+  ) => void;
   resetChallengeState(): void;
   resetScore(): void;
   resetStore(): void;

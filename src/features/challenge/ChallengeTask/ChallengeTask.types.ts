@@ -6,8 +6,8 @@ export type ChallengeTaskQuestion = {
 
 export type ChallengeTaskQuestions = Array<ChallengeTaskQuestion>;
 
-export type ScoreItem = ChallengeTaskQuestion & {
+export type ChallengeScoreItem = ChallengeTaskQuestion & {
   userAnswer: string;
 };
 
-export type ScoreItems = Array<ScoreItem>;
+export type ChallengeScoreItems = Array<ChallengeScoreItem>;
