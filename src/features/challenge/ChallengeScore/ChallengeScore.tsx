@@ -40,7 +40,7 @@ export const ChallengeScore = () => {
               <RotateCcw />
             </Button>
           </TooltipTrigger>
-          <TooltipContent>Repeat</TooltipContent>
+          <TooltipContent>Try again</TooltipContent>
         </Tooltip>
       </div>
       <Typography variant="p">
