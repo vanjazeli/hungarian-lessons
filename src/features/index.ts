@@ -5,7 +5,7 @@ export * from "./challenge/ChallengePanel/ChallengePanel";
 export * from "./challenge/ChallengePanel/ChallengePanel.types";
 export * from "./challenge/ChallengeScore/ChallengeScore";
 export * from "./challenge/ChallengePanel/useChallengePanelStore";
-export * from "./score/ScoreboardPanel/ScoreBoardPanel";
+export * from "./score/ScoreboardPanel/ScoreboardPanel";
 export * from "./score/ScoreboardPanel/ScoreboardPanel.types";
 export * from "./score/ScoreboardPanel/ScoreboardPanel.utils";
 export * from "./score/ScoreTable/ScoreTable";
