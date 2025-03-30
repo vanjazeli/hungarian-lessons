@@ -9,8 +9,8 @@ export const Scoreboard = () => {
         Score Hall <Trophy className="text-muted-foreground h-8 w-8" />
       </Typography>
       <Typography variant="p" muted>
-        Looks like the board is still empty! Dive into some lessons and start
-        racking up those scores.
+        Ready to see how high you can go? Rack up those scores and let the
+        scoreboard do the bragging for you!
       </Typography>
     </VerticalStack>
   );
