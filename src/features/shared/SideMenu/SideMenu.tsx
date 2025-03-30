@@ -6,6 +6,9 @@ import {
   Button,
   Typography,
   SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
 } from "components";
 import { Menu, Swords, Map, Trophy } from "lucide-react";
 import { Link } from "@tanstack/react-router";
@@ -21,6 +24,12 @@ export const SideMenu = () => {
         </Button>
       </SheetTrigger>
       <SheetContent>
+        <SheetHeader className="sr-only">
+          <SheetTitle>Menu</SheetTitle>
+          <SheetDescription>
+            Menu with links to different sections of the app.
+          </SheetDescription>
+        </SheetHeader>
         <div className="flex flex-col gap-2 px-4 py-12">
           <SheetClose asChild>
             <Button className="w-full" asChild variant="ghost">
