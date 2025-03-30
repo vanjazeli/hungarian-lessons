@@ -15,7 +15,7 @@ export const ChallengeIntro = () => {
       <Typography className="flex items-center gap-4" variant="h1">
         Accusative <Swords className="text-muted-foreground h-8 w-8" />
       </Typography>
-      <Typography variant="p">
+      <Typography variant="p" muted>
         For each word presented, input the correct Hungarian accusative form
         into the field using the appropriate suffix: -t, -ot, -et, -öt, or -at.
       </Typography>

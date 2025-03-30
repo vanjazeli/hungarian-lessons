@@ -125,7 +125,7 @@ export const ChallengeTask = () => {
       </Carousel>
       <form className="flex gap-4" onSubmit={handleSubmit}>
         <Input
-          placeholder="Type your answer here..."
+          placeholder="Your answer..."
           value={inputValue}
           onChange={handleChange}
           spellCheck="false"
