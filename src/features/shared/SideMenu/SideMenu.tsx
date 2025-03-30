@@ -8,7 +8,7 @@ import {
   SheetFooter,
 } from "components";
 import { Menu, Home, Swords } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "@tanstack/react-router";
 
 export const SideMenu = () => {
   const year = new Date().getFullYear();

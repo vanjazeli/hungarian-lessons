@@ -1,6 +1,6 @@
 import { CenterContainer } from "components";
 import { BackButton, ThemeButton, SideMenu } from "features";
-import { useLocation } from "react-router";
+import { useLocation } from "@tanstack/react-router";
 
 export const Navigation = () => {
   const isBackButtonShown = useLocation().pathname !== "/";

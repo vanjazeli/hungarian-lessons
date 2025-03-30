@@ -1,5 +1,5 @@
 import { Button, Typography, VerticalStack, Badge } from "components";
-import { Link } from "react-router";
+import { Link } from "@tanstack/react-router";
 
 export const MainMenu = () => {
   return (

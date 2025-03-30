@@ -1,6 +1,6 @@
 import { Badge, Button, Typography, VerticalStack } from "components";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "@tanstack/react-router";
 import { useChallengePanelStore, ChallengePanelState } from "features";
 
 export const ChallengeIntro = () => {
@@ -23,35 +23,35 @@ export const ChallengeIntro = () => {
         <ul className="flex flex-wrap gap-2">
           <li>
             <Badge variant="secondary" asChild>
-              <Link
-                to="https://betterhungarian.com/2018/04/15/hungarian-accusative-case-t-ot-at-et-ot/comment-page-1/"
+              <a
+                href="https://betterhungarian.com/2018/04/15/hungarian-accusative-case-t-ot-at-et-ot/comment-page-1/"
                 target="_blank"
               >
                 Better Hungarian
                 <ExternalLink />
-              </Link>
+              </a>
             </Badge>
           </li>
           <li>
             <Badge variant="secondary" asChild>
-              <Link
-                to="http://www.hungarianreference.com/Nouns/-t-accusative.aspx"
+              <a
+                href="http://www.hungarianreference.com/Nouns/-t-accusative.aspx"
                 target="_blank"
               >
                 Hungarian Reference
                 <ExternalLink />
-              </Link>
+              </a>
             </Badge>
           </li>
           <li>
             <Badge variant="secondary" asChild>
-              <Link
-                to="https://www.lingly.ai/blog/understanding-the-accusative-case-in-hungarian"
+              <a
+                href="https://www.lingly.ai/blog/understanding-the-accusative-case-in-hungarian"
                 target="_blank"
               >
                 lingly.ai
                 <ExternalLink />
-              </Link>
+              </a>
             </Badge>
           </li>
         </ul>

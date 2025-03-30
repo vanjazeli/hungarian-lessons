@@ -19,7 +19,7 @@ import { useChallengePanelStore } from "features";
 import { cn } from "lib";
 import { ArrowLeft, RotateCcw } from "lucide-react";
 import { ChallengePanelState } from "features";
-import { Link } from "react-router";
+import { Link } from "@tanstack/react-router";
 
 export const ChallengeScore = () => {
   const { score, setPanelState, resetScore } = useChallengePanelStore();

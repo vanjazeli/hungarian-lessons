@@ -1,10 +1,20 @@
-import { ReactNode } from "react";
-import { HashRouter as Router } from "react-router";
+import { routeTree } from "@/routeTree.gen";
+import {
+  createHashHistory,
+  createRouter,
+  RouterProvider,
+} from "@tanstack/react-router";
 
-type RouteProviderProps = {
-  children: ReactNode;
-};
+const router = createRouter({
+  routeTree,
+  history: createHashHistory(),
+});
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
-export const RouteProvider = ({ children }: RouteProviderProps) => {
-  return <Router>{children}</Router>;
+export const RouteProvider = () => {
+  return <RouterProvider router={router} />;
 };
