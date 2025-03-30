@@ -6,7 +6,6 @@ export * from "./challenge/ChallengePanel/ChallengePanel.types";
 export * from "./challenge/ChallengeScore/ChallengeScore";
 export * from "./challenge/ChallengePanel/useChallengePanelStore";
 export * from "./shared/BackButton/BackButton";
-export * from "./shared/BackButton/useBackButtonStore";
 export * from "./shared/Keyboard/Keyboard";
 export * from "./shared/Navigation/Navigation";
 export * from "./shared/SideMenu/SideMenu";

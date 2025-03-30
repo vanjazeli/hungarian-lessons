@@ -11,13 +11,13 @@ import {
   TooltipContent,
   TooltipTrigger,
   Button,
+  useBlockerProviderStore,
 } from "components";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { cn } from "lib";
 import {
   Keyboard,
   useChallengePanelStore,
-  useBackButtonStore,
   ChallengePanelState,
   ScoreItem,
 } from "features";
@@ -41,7 +41,7 @@ export const ChallengeTask = () => {
     resetChallengeState,
   } = useChallengePanelStore();
 
-  const { setIsConfirmationRequired } = useBackButtonStore();
+  const { setIsRedirectionBlocked } = useBlockerProviderStore();
 
   const inputFieldRef = useRef<HTMLInputElement>(null);
 
@@ -79,13 +79,13 @@ export const ChallengeTask = () => {
   }, [inputValue]);
 
   useEffect(() => {
-    setIsConfirmationRequired(true);
+    setIsRedirectionBlocked(true);
 
     return () => {
       resetChallengeState();
-      setIsConfirmationRequired(false);
+      setIsRedirectionBlocked(false);
     };
-  }, [resetChallengeState, setIsConfirmationRequired]);
+  }, [resetChallengeState, setIsRedirectionBlocked]);
 
   return (
     <VerticalStack>

@@ -1,9 +1,13 @@
-import { RouteProvider, TooltipProvider } from "components";
+import { TooltipProvider, BlockerProvider } from "components";
 
-export const AppProvider = () => {
+type AppProivderProps = {
+  children: React.ReactNode;
+};
+
+export const AppProvider = ({ children }: AppProivderProps) => {
   return (
-    <TooltipProvider>
-      <RouteProvider />
-    </TooltipProvider>
+    <BlockerProvider>
+      <TooltipProvider>{children}</TooltipProvider>
+    </BlockerProvider>
   );
 };

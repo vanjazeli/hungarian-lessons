@@ -3,6 +3,8 @@ export * from "./containers/VerticalStack/VerticalStack";
 export * from "./layouts/CenterLayout/CenterLayout";
 export * from "./layouts/MainLayout/MainLayout";
 export * from "./providers/AppProvider/AppProvider";
+export * from "./providers/BlockerProvider/BlockerProvider";
+export * from "./providers/BlockerProvider/useBlockerProviderStore";
 export * from "./providers/RouteProvider/RouteProvider";
 export * from "./ui/alert-dialog";
 export * from "./ui/badge";
