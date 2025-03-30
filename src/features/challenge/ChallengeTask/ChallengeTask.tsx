@@ -19,7 +19,7 @@ import {
   Keyboard,
   useChallengePanelStore,
   ChallengePanelState,
-  ScoreItem,
+  ChallengeScoreItem,
 } from "features";
 import { challengeTaskQuestions } from "./ChallengeTask.consts";
 import { getRandomQuestions, isLastQuestion } from "./ChallengeTask.utils";
@@ -66,7 +66,7 @@ export const ChallengeTask = () => {
       {
         ...questions[currentQuestionIndex],
         userAnswer: inputValue,
-      } as ScoreItem,
+      } as ChallengeScoreItem,
     ]);
 
     setInputValue("");
@@ -110,7 +110,7 @@ export const ChallengeTask = () => {
                   tabIndex={currentQuestionIndex !== index ? -1 : 0}
                 >
                   <Typography
-                    className="border-foreground border-b-2 border-dashed"
+                    className="border-muted-foreground border-b-2 border-dashed"
                     variant="h2"
                     onClick={(e) => e.stopPropagation()}
                   >
