@@ -1,7 +1,5 @@
 import { ChallengeScoreItems } from "features";
-
-export const isLocaleStringMatch = (first: string, second: string) =>
-  first.toLocaleLowerCase() === second.toLocaleLowerCase();
+import { isLocaleStringMatch } from "utils";
 
 export const calculateScore = (
   challengeScoreItems: ChallengeScoreItems

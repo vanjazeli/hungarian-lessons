@@ -2,21 +2,13 @@ import {
   Badge,
   Typography,
   VerticalStack,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
   Button,
-  TableCaption,
   Tooltip,
   TooltipTrigger,
   TooltipContent,
 } from "components";
-import { calculateScore, isLocaleStringMatch } from "./ChallengeScore.utils";
-import { useChallengePanelStore } from "features";
-import { cn } from "lib";
+import { calculateScore } from "./ChallengeScore.utils";
+import { ScoreTable, useChallengePanelStore } from "features";
 import { Map, RotateCcw } from "lucide-react";
 import { ChallengePanelState } from "features";
 import { Link } from "@tanstack/react-router";
@@ -47,43 +39,7 @@ export const ChallengeScore = () => {
         Not satisfied with your score? No worries, champions are made through
         practice. Hit that retry button and prove yourself!
       </Typography>
-      <Table>
-        <TableCaption>Challenge score summary</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-1/4">Word</TableHead>
-            <TableHead className="w-1/4">Translation</TableHead>
-            <TableHead className="w-1/4">Your answer</TableHead>
-            <TableHead className="w-1/4">Correct answer</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {score.map(
-            ({ noun, userAnswer, correctAnswer, translation }, index) => {
-              const isCorrect = isLocaleStringMatch(userAnswer, correctAnswer);
-
-              return (
-                <TableRow key={index}>
-                  <TableCell>{noun}</TableCell>
-                  <TableCell>{translation}</TableCell>
-                  <TableCell
-                    className={cn(
-                      "font-bold",
-                      isCorrect ? "text-green-500" : "text-red-500"
-                    )}
-                  >
-                    <Typography className="sr-only" variant="span">
-                      {isCorrect ? "Correct" : "Wrong"}
-                    </Typography>
-                    {userAnswer ? userAnswer : "-"}
-                  </TableCell>
-                  <TableCell>{correctAnswer}</TableCell>
-                </TableRow>
-              );
-            }
-          )}
-        </TableBody>
-      </Table>
+      <ScoreTable title="Challenge score summary" score={score} />
       <Button className="self-start" asChild>
         <Link to="/">
           <Map /> Roadmap
