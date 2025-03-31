@@ -30,6 +30,8 @@ export const ChallengeTask = () => {
     getRandomQuestions(challengeTaskQuestions, 10)
   );
 
+  const [isTaskComplete, setIsTaskComplete] = useState(false);
+
   const [api, setApi] = useState<CarouselApi | null>(null);
 
   const {
@@ -60,8 +62,7 @@ export const ChallengeTask = () => {
       setCurrentQuestionIndex((prev) => prev + 1);
       api?.scrollNext();
     } else {
-      setPanelState(ChallengePanelState.SCORE);
-      lsAddScoreboardItem({ challengeName: "Accusative", score });
+      setIsTaskComplete(true);
     }
 
     setScore((prev) => [
@@ -80,6 +81,13 @@ export const ChallengeTask = () => {
   useEffect(() => {
     inputFieldRef.current?.focus();
   }, [inputValue]);
+
+  useEffect(() => {
+    if (isTaskComplete) {
+      setPanelState(ChallengePanelState.SCORE);
+      lsAddScoreboardItem({ challengeName: "Accusative", score });
+    }
+  }, [isTaskComplete]);
 
   useEffect(() => {
     setIsRedirectionBlocked(true);
