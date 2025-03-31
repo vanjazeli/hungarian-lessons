@@ -1,5 +1,7 @@
 @import "tailwindcss";
+
 @import "./scrollbar/scrollbar.css";
+@import "./ui//accordion.css";
 
 @plugin "tailwindcss-animate";
 
