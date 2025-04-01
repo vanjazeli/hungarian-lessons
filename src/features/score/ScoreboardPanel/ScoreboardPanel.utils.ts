@@ -12,3 +12,7 @@ export const lsAddScoreboardItem = (scoreboardItem: ScoreboardItem) => {
 
   localStorage.setItem("scoreboard-items", JSON.stringify(items));
 };
+
+export const lsDeleteAllScoreboardItems = () => {
+  localStorage.removeItem("scoreboard-items");
+};

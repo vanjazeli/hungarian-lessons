@@ -34,7 +34,7 @@ export const BlockerProvider = ({ children }: BlockerProviderProps) => {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel onClick={reset}>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={proceed}>Exit</AlertDialogAction>
+            <AlertDialogAction onClick={proceed}>Confirm</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
