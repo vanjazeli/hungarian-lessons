@@ -87,7 +87,7 @@ export const ChallengeTask = () => {
       setPanelState(ChallengePanelState.SCORE);
       lsAddScoreboardItem({ challengeName: "Accusative", score });
     }
-  }, [isTaskComplete]);
+  }, [isTaskComplete, score, setPanelState]);
 
   useEffect(() => {
     setIsRedirectionBlocked(true);

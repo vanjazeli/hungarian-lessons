@@ -10,7 +10,7 @@ import {
   SheetTitle,
   SheetDescription,
 } from "components";
-import { Menu, Swords, Map, Trophy } from "lucide-react";
+import { Menu, Swords, Map, Trophy, GalleryHorizontalEnd } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export const SideMenu = () => {
@@ -44,6 +44,14 @@ export const SideMenu = () => {
               <Link to="/accusative">
                 <Swords />
                 Accusative
+              </Link>
+            </Button>
+          </SheetClose>
+          <SheetClose asChild>
+            <Button className="w-full" asChild variant="ghost">
+              <Link to="/filp-cards">
+                <GalleryHorizontalEnd />
+                Flip Cards
               </Link>
             </Button>
           </SheetClose>

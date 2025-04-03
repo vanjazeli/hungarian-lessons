@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from "./routes/__root";
 import { Route as ScoreboardImport } from "./routes/scoreboard";
+import { Route as FilpCardsImport } from "./routes/filp-cards";
 import { Route as AccusativeImport } from "./routes/accusative";
 import { Route as IndexImport } from "./routes/index";
 
@@ -20,6 +21,12 @@ import { Route as IndexImport } from "./routes/index";
 const ScoreboardRoute = ScoreboardImport.update({
   id: "/scoreboard",
   path: "/scoreboard",
+  getParentRoute: () => rootRoute,
+} as any);
+
+const FilpCardsRoute = FilpCardsImport.update({
+  id: "/filp-cards",
+  path: "/filp-cards",
   getParentRoute: () => rootRoute,
 } as any);
 
@@ -53,6 +60,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof AccusativeImport;
       parentRoute: typeof rootRoute;
     };
+    "/filp-cards": {
+      id: "/filp-cards";
+      path: "/filp-cards";
+      fullPath: "/filp-cards";
+      preLoaderRoute: typeof FilpCardsImport;
+      parentRoute: typeof rootRoute;
+    };
     "/scoreboard": {
       id: "/scoreboard";
       path: "/scoreboard";
@@ -68,12 +82,14 @@ declare module "@tanstack/react-router" {
 export interface FileRoutesByFullPath {
   "/": typeof IndexRoute;
   "/accusative": typeof AccusativeRoute;
+  "/filp-cards": typeof FilpCardsRoute;
   "/scoreboard": typeof ScoreboardRoute;
 }
 
 export interface FileRoutesByTo {
   "/": typeof IndexRoute;
   "/accusative": typeof AccusativeRoute;
+  "/filp-cards": typeof FilpCardsRoute;
   "/scoreboard": typeof ScoreboardRoute;
 }
 
@@ -81,27 +97,30 @@ export interface FileRoutesById {
   __root__: typeof rootRoute;
   "/": typeof IndexRoute;
   "/accusative": typeof AccusativeRoute;
+  "/filp-cards": typeof FilpCardsRoute;
   "/scoreboard": typeof ScoreboardRoute;
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: "/" | "/accusative" | "/scoreboard";
+  fullPaths: "/" | "/accusative" | "/filp-cards" | "/scoreboard";
   fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/accusative" | "/scoreboard";
-  id: "__root__" | "/" | "/accusative" | "/scoreboard";
+  to: "/" | "/accusative" | "/filp-cards" | "/scoreboard";
+  id: "__root__" | "/" | "/accusative" | "/filp-cards" | "/scoreboard";
   fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute;
   AccusativeRoute: typeof AccusativeRoute;
+  FilpCardsRoute: typeof FilpCardsRoute;
   ScoreboardRoute: typeof ScoreboardRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccusativeRoute: AccusativeRoute,
+  FilpCardsRoute: FilpCardsRoute,
   ScoreboardRoute: ScoreboardRoute,
 };
 
@@ -117,6 +136,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/accusative",
+        "/filp-cards",
         "/scoreboard"
       ]
     },
@@ -125,6 +145,9 @@ export const routeTree = rootRoute
     },
     "/accusative": {
       "filePath": "accusative.tsx"
+    },
+    "/filp-cards": {
+      "filePath": "filp-cards.tsx"
     },
     "/scoreboard": {
       "filePath": "scoreboard.tsx"
