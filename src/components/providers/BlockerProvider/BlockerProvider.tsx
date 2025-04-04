@@ -17,9 +17,9 @@ type BlockerProviderProps = {
 
 export const BlockerProvider = ({ children }: BlockerProviderProps) => {
   const { isRedirectionBlocked } = useBlockerProviderStore();
+
   const { proceed, reset, status } = useBlocker({
-    shouldBlockFn: () => isRedirectionBlocked,
-    withResolver: true,
+    condition: isRedirectionBlocked,
   });
 
   const [isOpen, setIsOpen] = useState(false);
